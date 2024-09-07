@@ -67,7 +67,7 @@ class FightController extends Controller
                     $fight_no = sprintf("%06d", $results->fight_no + 1);
                 }
 
-                $config = Configurations::where('key', '=', 'bet_percentage')->first();
+                $config = Configurations::where('name', '=', 'bet_percentage')->first();
 
                 Fights::create([
                     'event_id' => $event->id,
