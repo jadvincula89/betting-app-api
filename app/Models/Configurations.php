@@ -10,7 +10,7 @@ class Configurations extends Model
     use HasFactory;
     protected $table = 'configurations';
     protected $fillable = [
-        'key', 'value'
+        'name', 'vals','bet_percentage'
     ];
  
 }
