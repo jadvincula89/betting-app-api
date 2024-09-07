@@ -23,6 +23,7 @@ class CreateFightsTable extends Migration
   `created_by` varchar(45) DEFAULT NULL,
   `status` int(11) NOT NULL,
   `winner` int(5) DEFAULT NULL,
+  `start` int(11) DEFAULT 0,
   `updated_at` datetime DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `bet_percentage` varchar(45) NOT NULL,

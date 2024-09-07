@@ -25,6 +25,7 @@ class CreateTblEventsTable extends Migration
             $table->integer('isOpen')->unsigned()->default(0);
             $table->integer('isDelete')->default(0);
             $table->string('event_no', 45)->nullable();
+            $table->date('event_date')->nullable();
             $table->primary('id');
         });
     }
