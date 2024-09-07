@@ -61,9 +61,9 @@ class FightController extends Controller
                 $user = auth()->user();
                 $results = Fights::select(DB::raw('COUNT(id) fight_no'))
                     ->where('event_id', $event->id)
-                    ->first();
+                    ->findOrFail();
                 $fight_no = "000001";
-                if (isset($results->fight_no) && $results->fight_no >= 1) {
+                if ($results) {
                     $fight_no = sprintf("%06d", $results->fight_no + 1);
                 }
 
