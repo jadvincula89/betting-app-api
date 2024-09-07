@@ -28,6 +28,7 @@ class CreateTicketsTable extends Migration
             $table->string('ticket_no', 155)->nullable();
             $table->timestamp('claimed_on')->nullable();
             $table->primary('id');
+            $table->integer('winner')->nullable();
         });
     }
 
